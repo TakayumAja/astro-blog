@@ -1,9 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import BlogCard from "../components/BlogCard.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="flex-grow flex flex-col">
-  <p class="m-auto">This is body content</p>
-	</main>
+<Layout title="takayums">
+  <!-- Banner -->
+  <div class="my-8 w-max-4xl">
+    <img src="/programmer.jpg" class="w-full h-auto rounded-2xl" />
+  </div>
+
+  <h3 class="text-2xl font-bold mb-8">Post Blog</h3>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <BlogCard />
+    <BlogCard />
+    <BlogCard />
+    <BlogCard />
+    <BlogCard />
+    <BlogCard />
+  </div>
 </Layout>
