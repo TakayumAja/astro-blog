@@ -1,0 +1,29 @@
+---
+import Layout from "./Layout.astro";
+---
+
+<Layout>
+  <div class="mb-4">
+    <span class="px-3 py-2 bg-[#4B6BFB] rounded-lg text-white font-medium">Technology</span>
+  </div>
+  <h1 class="text-4xl font-semibold mb-5">
+    The Impact of Technology on the Workplace: How Technology is Changing
+  </h1>
+  <div class="flex items-center gap-5 text-gray-500 mb-8">
+    <div class="rounded-full relative w-9 h-9 bg-gray-500 overflow-hidden">
+      <img
+        src="https://unsplash.com/photos/DItYlc26zVI/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8bWFufGVufDB8fHx8MTY5NzE2OTM3OXww&force=true&w=640"
+        alt=""
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <p>Author</p>
+    <p>Agustus 20, 2023</p>
+  </div>
+  <img
+    src="https://unsplash.com/photos/9SoCnyQmkzI/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8cHJvZ3JhbW1lcnxlbnwwfHx8fDE2OTcxNTk4NDF8MA&force=true&w=1920"
+    alt=""
+    class="w-full lg:h-[400px] h-auto rounded-2xl object-cover mb-8"
+  />
+  <slot />
+</Layout>
