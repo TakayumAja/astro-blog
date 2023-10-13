@@ -1,0 +1,45 @@
+---
+import { convertDate } from "../utils/date.js";
+const { url, frontmatter } = Astro.props;
+---
+
+<div href={url} class="p-4 rounded-xl shadow-md">
+  <img
+    src="https://unsplash.com/photos/FCHlYvR5gJI/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjk2NzI0MDk3fA&force=true&w=640"
+    alt="blog card"
+    class="rounded-xl object-contain mb-4"
+    width=""
+    height="240"
+  />
+  <!-- Body Card-->
+  <div class="flex gap-2">
+    {
+      frontmatter.tags.map(tag => (
+        <span class="p-1.5 bg-[#4B6BFB]/5 text-[#4B6BFB] rounded-md font-medium text-sm">
+          {tag}
+        </span>
+      ))
+    }
+  </div>
+  <h2>
+    <a
+      href={url}
+      class="text-2xl font-bold mt-4 mb-5 block cursor-pointer hover:underline hover:text-[#4B6BFB] active:text-[#4B6BFB]"
+      >{frontmatter.title}</a
+    >
+  </h2>
+  <div>
+    <div class="flex items-center gap-x-5 text-gray-500">
+      <div class="w-9 h-9 rounded-full relative overflow-hidden bg-gray-500">
+        <img
+          src="https://unsplash.com/photos/v2aKnjMbP_k/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjk2NzI0NjI1fA&force=true&w=640"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <p class="text-base">{frontmatter.author}</p>
+      <p class="ml-auto text-base">
+        {convertDate(frontmatter.pubDate)}
+      </p>
+    </div>
+  </div>
+</div>
