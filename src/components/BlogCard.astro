@@ -1,6 +1,6 @@
 ---
 import { convertDate } from "../utils/date.astro";
-const { url, frontmatter } = Astro.props;
+const { url, tags, title, author, pubDate } = Astro.props;
 ---
 
 <div class="p-4 rounded-xl shadow-md hover:shadow-lg hover:scale-105 ease-in-out duration-200">
@@ -11,21 +11,20 @@ const { url, frontmatter } = Astro.props;
     height="240"
   />
   <!-- Body Card-->
-  <!-- <div class="flex gap-2">
+  <div class="flex gap-2">
     {
-      frontmatter.tags.map(tag => (
+      tags.map(tag => (
         <span class="p-1.5 bg-[#4B6BFB]/5 text-[#4B6BFB] rounded-md font-medium text-sm">
           {tag}
         </span>
       ))
     }
   </div>
-  -->
   <h2>
     <a
       href={url}
       class="text-2xl font-bold mt-4 mb-5 block cursor-pointer hover:underline hover:text-[#4B6BFB] active:text-[#4B6BFB]"
-      >{frontmatter.title}</a
+      >{title}</a
     >
   </h2>
   <div>
@@ -36,9 +35,9 @@ const { url, frontmatter } = Astro.props;
           class="w-full h-full object-cover"
         />
       </div>
-      <p class="text-base">{frontmatter.author}</p>
+      <p class="text-base">{author}</p>
       <p class="ml-auto text-base">
-        {convertDate(frontmatter.pubDate)}
+        {convertDate(pubDate)}
       </p>
     </div>
   </div>
