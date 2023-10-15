@@ -13,7 +13,7 @@ const { url, tags, title, author, pubDate } = Astro.props;
   <!-- Body Card-->
   <div class="flex gap-2">
     {
-      tags.map(tag => (
+      tags?.map(tag => (
         <span class="p-1.5 bg-[#4B6BFB]/5 text-[#4B6BFB] rounded-md font-medium text-sm">
           {tag}
         </span>

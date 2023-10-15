@@ -1,0 +1,8 @@
+pre {
+  border-radisu: 2rem;
+}
+pre > code {
+  display: grid;
+  padding: 1.5rem;
+  border-radius: 2rem;
+}
