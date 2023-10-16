@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="About Me">
-  <section class="flex items-center justify-center gap-8 my-auto">
+  <section class="flex items-center flex-col md:flex-row justify-center gap-8 my-auto">
     <img src="/takayums.png" class="max-h-[400px] max-w-[400px]" alt="takayums" />
     <div>
       <h1 class="font-bold text-4xl text-center mb-4">
@@ -13,7 +14,17 @@ import Layout from "../layouts/Layout.astro";
         Saya seorang FrontEnd Web Developer. Sekarang Saya mendalami teknologi React Js dan MERN.
         Semoga blog website ini membantu teman-teman semua untuk mendalami pemrograman.
       </p>
-      <div></div>
+      <div class="flex justify-center mt-4 gap-4">
+        <a href="https://github.com/TakayumAja" target="_blank" class="h-9 w-9">
+          <Icon name="uil:github" class="h-9 w-9" />
+        </a>
+        <a href="https://www.linkedin.com/in/takayumaja/" target="_blank" class="h-9 w-9">
+          <Icon name="uil:linkedin" class="h-9 w-9" />
+        </a>
+        <a href="https://www.instagram.com/takayums/" target="_blank" class="h-9 w-9">
+          <Icon name="uil:instagram-alt" class="h-9 w-9" />
+        </a>
+      </div>
     </div>
   </section>
 </Layout>
